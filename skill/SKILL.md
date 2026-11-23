@@ -33,6 +33,8 @@ Edit only the memory file, the session log, and files in the auto-memory folder.
    - Two lines contradict each other.
    - A session in the digest undid or re-corrected an edit an earlier dream run made. Leave the session's version in place and list the edit under `Reverted` in step 7.
 
+   - It holds a relative date ("yesterday", "next Friday", "in two weeks", "this quarter"). Rewrite it as an absolute date (`2026-11-21`, `by 2026-12-04`), counted from the date of the session or log entry that wrote it, not from today. When that source date cannot be found, flag the line instead of guessing.
+
    Fix the line in place when the evidence is direct. Prefix a settled revisit item with `[RESOLVED YYYY-MM-DD]` and leave it for the pruner. With no direct evidence, change nothing and flag it. Never invent a status.
 
 3. **Demote.** A memory line over ~400 characters, one holding procedure or history rather than current state, or one restating state that its own artifact already shows (tracker counts, a note's contents, a file listing) moves to this run's log entry in full. Leave one line behind that states the current state and names the log entry.
