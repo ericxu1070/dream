@@ -1,0 +1,5 @@
+# Copy to <project>/.claude/dream.toml. Every key is optional.
+memory = "memory.md"                  # injected memory file
+log = "logs/session-history.md"       # append-only session log
+briefs = "Daily Notes/*Brief.md"      # optional: daily email/calendar briefs read as evidence
+profiles = ["~/.claude"]              # Claude Code config dirs whose transcripts to read

@@ -1,0 +1,8 @@
+[Unit]
+Description=Daily memory pass, after the daily brief (Claude Code, /dream skill)
+After=network-online.target daily-brief.service
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/dream-run
+TimeoutStartSec=2100

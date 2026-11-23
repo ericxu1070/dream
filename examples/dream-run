@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Headless nightly dream run. Point PROJECT at the repo or vault that holds memory.md.
+set -uo pipefail
+PROJECT="${PROJECT:-$HOME/notes}"
+cd "$PROJECT" || exit 1
+timeout 1800 claude -p "/dream" --model opus \
+  --add-dir "$HOME/.claude/projects/$(pwd | sed 's/[^A-Za-z0-9]/-/g')/memory" \
+  --allowedTools "Skill" "Read" "Write" "Edit" "Glob" "Grep" \
+    "Bash(date:*)" "Bash(ls:*)" "Bash(notify-send:*)" \
+    "Bash(python3 .claude/skills/dream/scripts/prune_memory.py:*)" \
+    "Bash(python3 .claude/skills/dream/scripts/transcript_digest.py:*)"
